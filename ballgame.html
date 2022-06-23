@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .container{
+            height:600px;
+            width: 500px;;
+            background-color: red;
+            display: flex;
+        }
+        .ball{
+            position: absolute;
+            height:70px;
+            width:80px;
+            background-color: yellow;
+            top:5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <script>
+        function fun()
+        {
+            alert();
+            //$(".ball").css("top,300");
+        }
+         $(document).ready(function () {
+            $(".ball").mouseover(function(){
+                var r=''+Math.floor(Math.random() * (530 - 0) + 0);
+                $(".ball").css("top",r+"px");
+                var r=''+Math.floor(Math.random() * (420 - 0) + 0);
+                $(".ball").css("left",r+"px");
+            });
+        });
+        
+    </script>
+    <div class="container">
+        <div class="ball">hello</div>
+    </div>
+</body>
+</html>
